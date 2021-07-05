@@ -19,14 +19,15 @@ To use the above mentionned compiler fork in a fresh local switch, run the follo
 opam compiler create --switch=. NathanReb:jit-hook-411
 ```
 
-To use this, in addition to pinning this repo, you'll likely need to pin
-`compiler-libs-opttoplevel`:
+Then, in addition to pinning this repo, you'll likely need to pin `compiler-libs-opttoplevel`
+as opam doesn't handle transitive `pin-depends`:
 ```
 opam pin add compiler-libs-opttoplevel.0.1.0 git+https://github.com/NathanReb/compiler-libs-opttoplevel.git#0.1.0
 opam pin opttopfind.dev git+https://github.com/NathanReb/opttopfind.git
 ```
 
-You can also add the following `pin-depends` field to your opam file:
+Alternatively you can also add the following `pin-depends` field to your opam file so that
+`opam install ./` does the right thing:
 ```
 pin-depends: [
   [
