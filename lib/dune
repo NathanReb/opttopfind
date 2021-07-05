@@ -1,0 +1,3 @@
+(library
+  (public_name opttopfind)
+  (libraries compiler-libs-opttoplevel findlib))
