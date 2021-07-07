@@ -23,7 +23,7 @@ Then, in addition to pinning this repo, you'll likely need to pin `compiler-libs
 as opam doesn't handle transitive `pin-depends`:
 ```
 opam pin add compiler-libs-opttoplevel.0.1.0 git+https://github.com/NathanReb/compiler-libs-opttoplevel.git#0.1.0
-opam pin opttopfind.dev git+https://github.com/NathanReb/opttopfind.git
+opam pin opttopfind.0.1.0 git+https://github.com/NathanReb/opttopfind.git#0.1.0
 ```
 
 Alternatively you can also add the following `pin-depends` field to your opam file so that
@@ -35,8 +35,8 @@ pin-depends: [
     "git+https://github.com/NathanReb/compiler-libs-opttoplevel.git#0.1.0"
   ]
   [
-    "opttopfind.dev"
-    "git+https://github.com/NathanReb/opttopfind.git"
+    "opttopfind.0.1.0"
+    "git+https://github.com/NathanReb/opttopfind.git#0.1.0"
   ]
 ]
 ```
